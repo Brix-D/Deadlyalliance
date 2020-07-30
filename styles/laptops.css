@@ -1,0 +1,66 @@
+@media(max-width: 1370px) {
+	.wrapper-head
+	{
+		min-width: 60%!important;
+	}
+	.title-block {
+		//margin-top: 35%!important;
+	}
+	.title-block h1
+	{
+		font-size: 135px!important;
+	}
+	.title-block h1:before
+	{
+		font-size: 33px!important;
+		top: 15px!important;
+	}
+	.bg2 .back-video video
+	{
+		width: 190%!important;
+		height: auto!important;
+	}
+	.back-video video {
+		width: 140%!important;
+		height: auto!important;
+	}
+	.article-conteiner {
+		max-width: 85%!important;
+		margin-top: 7%!important;
+	}
+	.progress-container {
+		margin-top: 12%!important;
+	}
+	.raid-name {
+		font-size: 24px!important;
+	}
+	.progress-item {
+    	//width: 20vw!important;
+	}
+	.img-item {
+    	//width: 20vw!important;
+	}
+	.slider-back {
+		margin-top: 15%!important;
+		max-width: 75%!important;
+	}
+	.media {
+		bottom: 70px!important;
+	}
+	.slick-prev {
+		left: -8%!important;
+	}
+	#fullsize {
+		width: 900px!important;
+	}
+	.wrapper2 {
+		min-width: 80%!important;
+		margin-top: 14%!important;
+	}
+	.joinus form {
+   		width: 80%!important;
+	}
+	.wrapper {
+		margin-top: 14%!important;
+	}
+}

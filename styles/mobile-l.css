@@ -1,0 +1,258 @@
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	.back2
+	{
+		top:0%!important;
+	}
+	.wrapper-head
+	{
+		display: none!important;
+	}
+	.burger-menu-icon
+	{
+		display: block!important;
+	}
+	.burger-menu {
+		top: 30px!important;
+		height: 400px!important;
+	}
+	.author {
+		display: none!important;
+	}
+	section .back-video {
+		display: none;
+	}
+	.onepage-pagination {
+		display: none;
+	}
+	.bg1, .bg2, .bg3, .bg4, .bg5
+	{
+		background: url('../img/1.jpg') 0 0 no-repeat!important;
+		background-size: 100% 100%!important;
+	}
+	header {
+		height: 110px!important;
+	}
+	header .title-font-fam {
+		font-size: 30px!important;
+	}
+	.bm-item a
+	{
+		font-size: 20px!important;
+		line-height: 3em!important;
+	}
+	.aboutus
+	{
+		max-width: 85%!important;
+		margin-top: 20%!important;
+	}
+	.aboutus h2 {
+		margin: 0!important;
+		margin-top: 1%!important;
+		margin-bottom: 1%!important;
+	}
+	.aboutus p {
+		font-size: 18px!important;
+	}
+	.title-block
+	{
+		//margin-top: 60%!important;
+	}
+	.title-block h1
+	{
+		font-size: 45px!important;
+	}
+	.title-block h1:before
+	{
+		font-size: 18px!important;
+		top: 15px!important;
+	}
+	.article-conteiner
+	{
+		max-width: 100%!important;
+		margin-top: 20%!important;
+	}
+	.article-conteiner h2 {
+		font-size: 30px!important;
+		margin-bottom: 1%!important; 
+	}
+	.article-conteiner .news-container {
+		width: 85%!important;
+	}
+	.article-conteiner article .video
+	{
+		display: none;
+		//width: 80%!important;
+		//height: 85px !important;
+		//margin: 0 auto !important;
+	}
+	.article-conteiner article .video-mob
+	{
+		display: block!important;
+		outline: none;
+		width: 95%!important;
+		height: 165px!important;
+		margin: 0 auto !important;
+	}
+	.article-conteiner article .video-mob a img {
+		width: 100%!important;
+		height: 100%!important;
+	}
+	.article-conteiner article .text-article 
+	{
+		font-size: 18px!important;
+	}
+	.slider-back
+	{
+		max-width: 85%!important;
+		//height: 200px!important;
+		height: 300px!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.slider-container
+	{
+		max-width: 95%!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.slider-container .slider-item
+	{
+		width: 300px!important;
+	}
+	.slider-container .slider-item img
+	{
+		width: 299px!important;
+	}
+	.slick-prev
+	{
+		left: -17%!important;
+	}
+	.slick-next
+	{
+		left: 105%!important;
+	}
+	.media {
+		bottom: 30px !important;
+	}
+	.raid-progress
+	{
+		flex-direction: column;
+	}
+	.progress-container {
+		width: 90%!important;
+	}
+	.progress-container h2 {
+		font-size: 30px!important;
+	}
+	.progress-item
+	{
+		width: 25%!important;
+	}
+	.img-item
+	{
+		//width: 88vw;
+	}
+	.raid-name
+	{
+		font-size: 15px!important;
+		height: 3em!important;
+	}
+	#fullsize {
+		width: 350px!important;
+	}
+	/*устав*/
+
+	.title-font-fam
+	{
+		font-size: 40px!important; 
+	}
+	.wrapper
+	{
+		margin-top: 36%!important;
+		padding: 2%;
+	}
+	.back3 {
+		background: url("/img/2.jpg") no-repeat!important;
+		background-size: cover!important;
+		background-position: center!important;
+	}
+	.charter h1
+	{
+		font-size: 35px;
+	}
+	.charter-list 
+	{
+		font-size: 15px;
+	}
+
+	/*вступить*/
+	.wrapper2 {
+		width: 85%;
+	}
+	.joinus 
+	{
+		margin-top: 20.5%!important;
+	}
+	.joinus form {
+		width: 100%!important;
+	}
+	.joinus h1
+	{
+		font-size: 30px!important;
+	}
+	.joinus ol li
+	{
+		font-size: 18px!important;
+	}
+	.joinus span
+	{
+		font-size: 18px!important;
+	}
+	.joinus p, .joinus a
+	{
+		height: 3em;
+		font-size: 18px!important;
+	}
+	.form-container {
+		width: 85% !important;
+	}
+	.form-container input[type="submit"] 
+	{
+		width: 80%!important;
+	}
+	.form-container textarea {
+		width: 100%!important;
+	}
+
+	/*Новости*/
+	.news-cont {
+		width: 90%!important;
+	}
+	.title-new h3{
+		font-size: 19px!important;
+	}
+	.news-item span.date {
+		font-size: 15px!important;
+		width: 35%!important;
+		right: 9%!important;
+	}
+	.news-item .text-new p {
+		font-size: 20px!important;
+	}
+	.img-new-cont {
+    width: 75%!important;
+    margin: 0 auto!important;
+	}
+	/*Вход*/
+	/*Регистрация*/
+		.wrapper4 .form {
+			width: 90%!important;
+		}
+		main div.form form input[type="text"], input[type="password"] {
+			width: 80%!important;
+			margin: 2% 10%!important;
+		}
+		.size_sub {
+			width: 80%!important;
+		}
+}

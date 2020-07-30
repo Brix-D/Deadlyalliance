@@ -1,0 +1,8 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+
+DirectoryIndex /index.php
+
+RewriteCond %{REQUEST_URI} !\.(php|css|jspng|gif|jpeg|jpg|mp4|png|webm|webp|js)$
+RewriteRule .* index.php

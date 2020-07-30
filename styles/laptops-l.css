@@ -1,0 +1,21 @@
+@media (max-width: 1440px) {
+	.wrapper-head
+	{
+		min-width: 70%;
+	}
+	.title-block h1 {
+		font-size: 190px!important;
+	}
+	.article-conteiner article .video {
+		width: 75%!important;
+	}
+	.article-conteiner article .text-article p {
+		//font-size: 21px;
+	}
+	.progress-container {
+		margin-top: 3%!important;
+	}
+	.media {
+		bottom: 100px!important;
+	}
+}

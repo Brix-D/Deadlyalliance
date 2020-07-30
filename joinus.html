@@ -1,0 +1,68 @@
+<div class="back2 backheight2" id="back2">
+	
+</div>
+<!--<div class="back-video">
+			<video autoplay="autoplay" muted="muted" preload="preload" loop="loop">
+				<source src="/img/back2.webm">
+			</video>
+</div>-->
+<main class="wrapper2">
+	<div class="joinus">
+		<h1 class="text-font-fam">Вступить в гильдию</h1>
+		<form action="/send.php" method="POST" id="form">
+			<div class="flex-container">
+				<div class="input-container">
+					<p>Ваш класс:</p>
+					<select name="class" id="class">
+						<option value="Воин">Воин</option>
+						<option value="Охотник">Охотник</option>
+						<option value="Разбойник">Разбойник</option>
+						<option value="Жрец">Жрец</option>
+						<option value="Шаман">Шаман</option>
+						<option value="Маг">Маг</option>
+						<option value="Чернокнижник">Чернокнижник</option>
+						<option value="Друид">Друид</option>
+					</select><br>
+					<p>Ваш уровень:</p>
+					<input type="text" name="level" id="level" required><br>
+					<p>Ваша специализация:</p>
+					<input type="text" name="spec" id="spec" required><br>
+				</div>
+				<div class="input-container">
+					<p>Ник вашего персонажа:</p>
+					<input type="text" name="nickname" id="nickname" required><br>
+					<p>Ваш часовой пояс:</p>
+					<select name="timezone" id="timezone">
+						<option value="-4">МСК - 4</option>
+						<option value="-3">МСК - 3</option>
+						<option value="-2">МСК - 2</option>
+						<option value="-1">МСК - 1</option>
+						<option selected value="0">МСК</option>
+						<option value="+1">МСК + 1</option>
+						<option value="+2">МСК + 2</option>
+						<option value="+3">МСК + 3</option>
+						<option value="+4">МСК + 4</option>
+						<option value="other">Другой</option>
+					</select><br>
+					<p>Ваше основное направление игры:</p>
+					<select name="direction" id="direction">
+						<option value="PVP">PVP</option>
+						<option value="PVE">PVE</option>
+					</select><br>
+				</div>
+			</div>
+			<div class="form-container">
+				<p><input type="checkbox" name="discord">У меня есть программа Discord для голосового общения</p><br>
+				<p><input type="checkbox" name="read" required>Я прочитал и готов соблюдать Устав гильдии</p><br>
+				<p>Напишите немного о себе:</p>
+				<textarea name="aboutme" cols="30" rows="15"></textarea><br>
+				<input type="submit" name="send" value="Подать заявку" id="send">
+			</div>
+		</form>
+		<div class="success" id="success">
+			<h3>Заявка отправлена</h3>
+			<p>Ваша заявка поступила на рассмотрение. В игре с вами скоро свяжутся.
+			</p>
+		</div>
+	</div>
+</main>

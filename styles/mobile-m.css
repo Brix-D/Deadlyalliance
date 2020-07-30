@@ -1,0 +1,76 @@
+/*@media (max-width: 375px) {
+	.title-block h1
+	{
+		font-size: 50px!important;
+	}
+	.title-block h1:before
+	{
+		font-size: 14px!important;
+		top: 10px!important;
+	}
+	.aboutus h2
+	{
+		font-size: 40px!important;
+	}
+	.aboutus p
+	{
+		font-size: 20px!important;
+	}
+	.article-conteiner article
+	{
+		//height: 500px!important;
+	}
+	.article-conteiner article .video
+	{
+		height: 340px !important;
+	}
+	.article-conteiner article .text-article 
+	{
+		font-size: 17px!important;
+	}
+	.slider-container
+	{
+		margin-top: 6.5% !important;
+	}
+	.slider-container .slider-item
+	{
+		width: 260px!important;
+	}
+	.slider-container .slider-item img
+	{
+		width: 259px!important;
+	}
+	.slick-prev
+	{
+		width: 30px!important;
+		height: 30px!important;
+	}
+	.slick-next
+	{
+		width: 30px!important;
+		height: 30px!important;
+	}
+
+	/*вступить*/
+
+	/*.backheight
+	{
+		min-height: 2985px;	
+	}
+	.backheight2
+	{
+		min-height: 1040px;
+	}
+	.joinus ol li
+	{
+		font-size: 25px!important;
+	}
+	.joinus a
+	{
+		font-size: 20px!important;
+	}
+	.joinus span
+	{
+		font-size: 25px!important;
+	}
+}*/
