@@ -98,7 +98,7 @@ $(function(){
 $(document).ready(function(){
 	$('#addnew').click(function(event){
 		$('body').append('<div id="overlay2"></div>' + 
-			'<div id="addform"><form id = "formD" method="POST" action="/addnew.php" enctype="multipart/form-data">' +
+			'<div id="addform"><form id = "formD" method="POST" action="controllers/addnew.php" enctype="multipart/form-data">' +
 			'<h2>Добавить новость</h2>"<p id="mes" class="message"></p>"<input type="text" name="header" placeholder = "Введите заголовок статьи:">'+
 			'<p>Добавить картинку</p><input type="file" name="image"><textarea cols="40" rows="20" placeholder = "Введите текст статьи:" name="text"></textarea>'+
 			'<button type="submit" id="add" value="Сохранить">Сохранить</button><button id="closeform">Закрыть окно</button></form></div>');
@@ -161,7 +161,7 @@ $('body').on('click', '.delnew', function(event) {
 	let id = $(btn).attr('value');
 	$.ajax({
 		type: 'POST',
-		url: '/delnew.php',
+		url: 'controllers/delnew.php',
 		//contentType: false,
 		//cache: false,
 		dataType: "json",
@@ -180,7 +180,7 @@ $(document).ready(function()
 	let id;
 $('body').on('click', '.editnew', function(event) {
 	$('body').append('<div id="overlay2"></div>' + 
-			'<div id="addform"><form id = "formD" method="POST" action="/editnew.php" enctype="multipart/form-data">' +
+			'<div id="addform"><form id = "formD" method="POST" action="controllers/editnew.php" enctype="multipart/form-data">' +
 			'<h2>Изменить новость</h2>"<p id="mes" class="message"></p>"<input id="titleinp" type="text" name="header" placeholder = "Введите заголовок статьи:">'+
 			'<p>Изменить картинку</p><input type="file" name="image"><textarea id="textarea" cols="40" rows="20" placeholder = "Введите текст статьи:" name="text"></textarea>'+
 			'<button type="submit" id="savenew" value="Сохранить">Сохранить</button><button id="closeform">Закрыть окно</button></form></div>');
@@ -202,7 +202,7 @@ $('body').on('click', '.editnew', function(event) {
 	id = $(btn).attr('value');
 	$.ajax({
 		type: 'POST',
-		url: '/selectedit.php',
+		url: 'controllers/selectedit.php',
 		//contentType: false,
 		//cache: false,
 		dataType: "json",
