@@ -1,15 +1,19 @@
 <?php
 
 session_start();
-function auto($className) {
-	if (file_exists("core/" . $className . ".php")) {
-		include_once "core/" . $className . ".php";
-	} elseif (file_exists("controllers/" . $className . ".php")) {
-		include_once "controllers/" . $className . ".php";
-	} elseif (file_exists("models/" . $className . ".php")) {
-		include_once "models/" . $className . ".php";
-	} elseif (file_exists($className . ".php")) {
-		include_once $className . ".php";
+/**
+ * автозагрузчик классов, ищет файл класса в паках core,
+ * controllers, models, и если найден то подключает его определение
+ */
+function auto($class_name) {
+	if (file_exists("core/" . $class_name . ".php")) {
+		include_once "core/" . $class_name . ".php";
+	} elseif (file_exists("controllers/" . $class_name . ".php")) {
+		include_once "controllers/" . $class_name . ".php";
+	} elseif (file_exists("models/" . $class_name . ".php")) {
+		include_once "models/" . $class_name . ".php";
+	} elseif (file_exists($class_name . ".php")) {
+		include_once $class_name . ".php";
 	}
 }
 spl_autoload_register("auto");

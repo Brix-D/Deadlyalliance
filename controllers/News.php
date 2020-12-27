@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * Страница новости
+	 * Контроллер страницы новости
 	 */
 	class News
 	{
@@ -14,7 +14,7 @@
 			$this->page = $page;
 		}
 		public function action() {
-			$result = $this->model->selectNews();
+			$result = $this->model->select_news(); // запрос всей нововстей из БД
 			$title = "Новости | Смертельный союз";
 			$description = "Последние новости сообщества Смертельный союз WoW Classic";
 			$keywords = "WoW Classic, Гильдия WoW, Смертельный Союз, Новости гильдии, Пламегор, Flamegor, Орда, Deadly Alliance";

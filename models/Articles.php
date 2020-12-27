@@ -1,57 +1,73 @@
 <?php
 	/**
-	 * Модель статей
+	 * Модель статей, отвечает за работу с БД MySQl, используется обертка PDO
 	 */
 	class Articles
 	{
 		private $connection;
+
 		public function __construct()
 		{
 			$this->connection = new PDO('mysql:host=localhost; dbname=deadlyalliance; charset=utf8', 'mysql', 'mysql');
 		}
-		public function selectNews() {
+
+		/**
+		* Выборка всех новостей
+         */
+		public function select_news() {
 			$query = $this->connection->prepare("SELECT articles.id,`id_user`, `title`, `picture`, `text`, `date`, `username` FROM articles INNER JOIN users ON articles.id_user = users.id ORDER BY `date` DESC;");
 			$query->execute();
 			$res = $query->fetchAll(PDO::FETCH_ASSOC);
 			return $res;
 		}
-		public function insertArticle($id_user, $data, $file) {
-			//var_dump($data);
+
+		/**
+        * Добавление новости в БД
+        */
+		public function insert_article($id_user, $data, $file) {
+		    // Валидация поле ввода, и изображения
 			if(empty($data["header"]) || empty($data["text"])) {
 				$status = "Необходимо заполнить поля заголовка и текста статьи!";
-				$errorCode = false;
-				return array($status, $errorCode);
+				$error_code = false;
+				return array($status, $error_code);
 			}
 			if($file["error"] == 4) {
-				$imgname = "1.jpg";
+				$image_name = "1.jpg";
 				$status = "Изображение не выбрано, будет загружена картинка по умолчанию";
 			} else {
+			    // проверка типа файла
 				if(($file["type"] != "image/jpeg") && ($file["type"] != "image/png") && ($file["type"] != "image/gif")){
-					$imgname = "1.jpg";
+					$image_name = "1.jpg";
 					$status = "Допустимы изображения только форматов jpeg, png и gif";
-					$errorCode = false;
-					return array($status, $errorCode);
+					$error_code = false;
+					return array($status, $error_code);
 				} else {
-				$imgname = str_replace(" ", "_", $file["name"]);
-				$imgtmpname = $file["tmp_name"];
-				move_uploaded_file($imgtmpname, "../postpic/$imgname");
+				$image_name = str_replace(" ", "_", $file["name"]);
+				$image_temp_name = $file["tmp_name"];
+				move_uploaded_file($image_temp_name, "../postpic/$image_name");
 				$status = "";
 				}
 			}
 			$query = $this->connection->prepare("INSERT INTO articles (id_user, title, picture, text) VALUES (:id_u, :title, :img, :txt)");
-			$dataQuery = array(":id_u" => $id_user, ":title"=>$data["header"], ":img" => $imgname, ":txt" => $data["text"]);
-			$query->execute($dataQuery);
-			$errorCode = true;
-			return array($status, $errorCode);
+			$parameters = array(":id_u" => $id_user, ":title"=>$data["header"], ":img" => $image_name, ":txt" => $data["text"]);
+			$query->execute($parameters);
+			$error_code = true;
+			return array($status, $error_code);
 		}
 
-		public function deleteArticle($id) {
+		/**
+		* Удаление новости из БД
+         */
+		public function delete_article($id) {
 			$query = $this->connection->prepare("DELETE FROM articles WHERE id = :idnew");
 			$data = array(":idnew" => $id);
 			$query->execute($data);
 		}
 
-		public function selectEdit($id)
+		/**
+		* Выборка новости для последующего редактирования
+         */
+		public function select_edit($id)
 		{
 			$query = $this->connection->prepare("SELECT * FROM articles WHERE id = :idnew");
 			$data = array(":idnew" => $id);
@@ -59,34 +75,36 @@
 			$result = $query->fetch(PDO::FETCH_ASSOC);
 			return $result;
 		}
-
-		public function editNew($id, $data, $file) {
+        /**
+        * Редактирование новости
+         */
+		public function edit_new($id, $data, $file) {
 			if(empty($data["header"]) || empty($data["text"])) {
 				$status = "Необходимо заполнить поля заголовка и текста статьи!";
-				$errorCode = false;
-				return array($status, $errorCode);
+				$error_code = false;
+				return array($status, $error_code);
 			}
 			if($file["error"] == 4) {
 				$query = $this->connection->prepare("UPDATE articles SET title = :title, text = :txt WHERE id = :idn");
-				$dataQuery = array(":title"=>$data["header"], ":txt" => $data["text"], ":idn" => $id);
+				$parameters = array(":title"=>$data["header"], ":txt" => $data["text"], ":idn" => $id);
 			} else {
 				if(($file["type"] != "image/jpeg") && ($file["type"] != "image/png") && ($file["type"] != "image/gif")){
 					$status = "Допустимы изображения только форматов jpeg, png и gif";
-					$errorCode = false;
-					return array($status, $errorCode);
+					$error_code = false;
+					return array($status, $error_code);
 				} else {
-				$imgname = str_replace(" ", "_", $file["name"]);
-				$imgtmpname = $file["tmp_name"];
-				move_uploaded_file($imgtmpname, "../postpic/$imgname");
+				$image_name = str_replace(" ", "_", $file["name"]);
+				$image_temp_name = $file["tmp_name"];
+				move_uploaded_file($image_temp_name, "../postpic/$image_name");
 				$query = $this->connection->prepare("UPDATE articles SET title = :title, picture = :img, text = :txt WHERE id = :idn");
-				$dataQuery = array(":title"=>$data["header"], ":img" => $imgname, ":txt" => $data["text"], ":idn" => $id);
+				$parameters = array(":title"=>$data["header"], ":img" => $image_name, ":txt" => $data["text"], ":idn" => $id);
 				}
 			}
 			$status = "";
 			
-			$query->execute($dataQuery);
-			$errorCode = true;
-			return array($status, $errorCode);
+			$query->execute($parameters);
+			$error_code = true;
+			return array($status, $error_code);
 		}
 	}
 

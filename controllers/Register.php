@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * страница регистрация
+	 * Контроллер страницы регистрации
 	 */
 	class Register
 	{
@@ -15,13 +15,13 @@
 		public function action() {
 			if(isset($_POST["reg"]) == true)
 			{
-				$Registred = $this->model->register($_POST["user"], $_POST["email"], $_POST["password"]);
+				$registered = $this->model->register($_POST["user"], $_POST["email"], $_POST["password"]);
 			}
 			$title = "Регистрация | Смертельный союз";
 			$description = "";
 			$keywords = "";
 			$data = ["page" => $this->page, "title" => $title, "description" => $description, "keywords" => $keywords];
-			$data["Registred"] = $Registred;
+			$data["Registred"] = $registered;
 			$this->view->render("views/template.php", "views/register.php", $data);
 		}
 	}

@@ -4,18 +4,21 @@
 	 */
 	class Router
 	{
+	    /**
+	    * Метод основного действия класса
+         */
 		public function action() {
-			$page = $_SERVER["REQUEST_URI"];
+			$page = $_SERVER["REQUEST_URI"]; // получает путь от корня сайта
 			$page = str_replace("/", "", $page);
 			if($page == "") {
-				$controllerName = "Main";
+				$controller_name = "Main";
 			} else {
-				$controllerName = ucfirst($page);
+				$controller_name = ucfirst($page);
 			}
-			$methodName = "action";
-			$controller = new $controllerName($page);
-			if(method_exists($controller, $methodName)) {
-				$controller->$methodName();
+			$method_name = "action"; // метод действия по умолчанию
+			$controller = new $controller_name($page); // создает объект контроллера с именем страницы
+			if(method_exists($controller, $method_name)) {
+				$controller->$method_name(); // если метод действия существует то вызывает его
 			}
 			else {
 				echo "Метод не найден";

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1091edd0-486b-427f-b669-64b2802e17c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/mainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addnew.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addnew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/delnew.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/delnew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/editnew.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/editnew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/selectedit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/selectedit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/send.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/send.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mFMe8r9AImxD8tPsYEMkpeRCs6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1091edd0-486b-427f-b669-64b2802e17c3" name="Default Changelist" comment="" />
+      <created>1609084995424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609084995424</updated>
+      <workItem from="1609085002734" duration="3300000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="358" key="#SQL_Dialects" timestamp="1609086847091">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="336" y="358" key="#SQL_Dialects/0.0.1920.1034@0.0.1920.1034" timestamp="1609086847091" />
+    <state x="552" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609086881961">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="552" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1609086881961" />
+  </component>
+</project>

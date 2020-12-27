@@ -114,6 +114,7 @@
 	</footer>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/mainPage.js"></script>
+<script type="text/javascript" src="js/newsManger.js"></script>
 </body>
 </html>

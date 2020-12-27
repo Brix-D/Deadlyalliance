@@ -1,4 +1,7 @@
 <?php
+/**
+* Отправка письма на почту администратора сайта
+ */
 $class = trim(addslashes(htmlspecialchars($_POST['class'])));
 $level = trim(addslashes(htmlspecialchars($_POST['level'])));
 $spec = trim(addslashes(htmlspecialchars($_POST['spec'])));
