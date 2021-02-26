@@ -18,6 +18,8 @@
 	<link href="//db.onlinewebfonts.com/c/3ade034999153f8110b40724ad74f00e?family=Pacifica" rel="stylesheet" type="text/css"/>
 	<link href="//db.onlinewebfonts.com/c/3ad0fc99253e9a25029a8b33686e46fa?family=GeographicaScriptW01-Rg" rel="stylesheet" type="text/css"/>
 	<script src="js/jquery-3.4.1.min.js"></script>
+<!--    <link rel="stylesheet" href="styles/swiper-bundle.css">-->
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
 	<meta name="viewport" content="width=device-width">
 	<title><?=$title?></title>
 </head>
@@ -113,6 +115,8 @@
 		</div>
 	</footer>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<!--<script src="js/swiper-bundle.js"></script>-->
+<script src="js/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
 <script type="text/javascript" src="js/mainPage.js"></script>
 <script type="text/javascript" src="js/newsManger.js"></script>

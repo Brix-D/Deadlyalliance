@@ -24,18 +24,31 @@ function displayMenu() {
 
 //слайдер картинок
 
-$(document).ready(
-function ()
-{
-	$('.slider-container').slick({
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true
-	});
-}
-);
+// $(document).ready(
+// function ()
+// {
+// 	$('.slider-container').slick({
+//   infinite: true,
+//   speed: 300,
+//   slidesToShow: 1,
+//   centerMode: true,
+//   variableWidth: true
+// 	});
+// }
+// );
+
+// слайдер картинок на swiper.js
+
+const swiper = new Swiper('.swiper-container', {
+	slidesPerView: 'auto',
+	spaceBetween: 50,
+	centeredSlides: true,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next-unique",
+		prevEl: ".swiper-button-prev-unique",
+	},
+});
 
 //слайдер новостей
 
