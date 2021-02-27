@@ -8,7 +8,7 @@
 
 		public function __construct()
 		{
-			$this->connection = new PDO('mysql:host=localhost; dbname=deadlyalliance; charset=utf8', 'mysql', 'mysql');
+			$this->connection = new PDO('mysql:host=localhost:3307; dbname=deadlyalliance; charset=utf8', 'mysql', 'mysql');
 		}
 
 		/**
