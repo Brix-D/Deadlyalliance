@@ -30,7 +30,7 @@
 					<img src=<?php echo "/postpic/" . $item["picture"]?> alt="">
 				</div>
 				<?php if($isadmin == true){?>
-					<div class="admin-tools2"><button class="editnew" value = "<?=$item["id"]?>"></button><button class="delnew" value = "<?=$item["id"]?>"></button></div>
+					<div class="admin-tools2"><button class="editnew" data-id-new = "<?=$item["id"]?>"></button><button class="delnew" data-id-new = "<?=$item["id"]?>"></button></div>
 				<?php } ?>
 			</div>
 			<div class="text-new text-font-fam"><p><?php echo $item["text"]?></p></div>

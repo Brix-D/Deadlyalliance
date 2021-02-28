@@ -1,8 +1,14 @@
+SetEnvIfNoCase Access-Control-Request-Method "(GET|POST|PUT|DELETE|OPTIONS)" IsPreflight=1
+SetEnvIfNoCase Origin ".*" AccessControlAllowOrigin=$0
+SetEnvIfNoCase Origin "http://(deadlyalliance)$" AccessControlAllowOrigin=$0
+Header always set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" env=IsPreflight
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, Accept, Accept-Language" env=IsPreflight
+Header always set Access-Control-Max-Age "7200" env=IsPreflight
 RewriteEngine On
-Options +FollowSymlinks
-RewriteBase /
-
-DirectoryIndex /index.php
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteCond %{ENV:IsPreflight} 1
+RewriteRule ^(.*)$ $1 [R=204,L]
 
 RewriteCond %{REQUEST_URI} !\.(php|css|jspng|gif|jpeg|jpg|mp4|png|webm|webp|js)$
 RewriteRule .* index.php

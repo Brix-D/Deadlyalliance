@@ -61,7 +61,7 @@
 		public function delete_article($id) {
 			$query = $this->connection->prepare("DELETE FROM articles WHERE id = :idnew");
 			$data = array(":idnew" => $id);
-			$query->execute($data);
+			return $query->execute($data);
 		}
 
 		/**
