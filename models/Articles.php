@@ -8,7 +8,11 @@
 
 		public function __construct()
 		{
-			$this->connection = new PDO('mysql:host=localhost:3307; dbname=deadlyalliance; charset=utf8', 'mysql', 'mysql');
+		    $port = 3306;
+		    $dsn = 'mysql:host=localhost:'. $port .'; dbname=deadlyalliance; charset=utf8';
+		    $username = 'root';
+		    $password = 'root';
+			$this->connection = new PDO($dsn, $username, $password);
 		}
 
 		/**
