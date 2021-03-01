@@ -2,11 +2,75 @@
 window.addEventListener('load', function (event) {
     // при загрузке страницы
     if (window.location.href.includes("News")) {
+        loadNews(0, 3).then(render_news);
+
         addNewListener();
         deleteNewListener();
         editNewListener();
     }
 });
+
+// загрузить n новостей
+async function loadNews(offset, limit){
+
+    let response = await fetch("news/select_limited", {
+        method: "post",
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: JSON.stringify({offset: offset, limit: limit}),
+    });
+    let result;
+    if (response.ok) {
+        result = await response.json();
+    }
+    else {
+        result = await response.error();
+    }
+    return result;
+}
+// отрисовать все новости
+function render_news(result) {
+    let containerDiv = document.querySelector('.news-cont');
+    for (let item of result) {
+        render_one_new(item, containerDiv);
+    }
+}
+// отрисовать одну новость
+function render_one_new(data, container) {
+    let containerNew = document.createElement("div");
+    containerNew.classList.add('news-item');
+    let titleNew = document.createElement('div');
+    titleNew.classList.add('title-new');
+    containerNew.append(titleNew);
+    let titleH3 = document.createElement('h3');
+    titleH3.classList.add('tn');
+    titleH3.classList.add('text-font-fam');
+    titleH3.innerHTML = data["title"];
+    titleNew.append(titleH3);
+    let dateSpan = document.createElement('span');
+    dateSpan.classList.add('date');
+    dateSpan.innerHTML = data["username"] + " " + data["date"];
+    containerNew.append(dateSpan);
+    let imgNewContainer = document.createElement('div');
+    imgNewContainer.classList.add('img-new-cont');
+    containerNew.append(imgNewContainer);
+    let imgContainer = document.createElement('div');
+    imgContainer.classList.add('img-cont');
+    imgNewContainer.append(imgContainer);
+    let image = document.createElement('img');
+    image.src = '/postpic/' + data["picture"];
+    imgContainer.append(image);
+    let textDiv = document.createElement('div');
+    textDiv.classList.add('text-font-fam');
+    textDiv.classList.add('text-new');
+    containerNew.append(textDiv);
+    let textP = document.createElement('p');
+    textP.innerHTML = data["text"];
+    textDiv.append(textP);
+    container.append(containerNew);
+}
 // генерация html кода формы
 function createForm(type) {
     let formHtml = '<div id="overlay2"></div><div id="addform"><form id = "formD" method="POST" ';

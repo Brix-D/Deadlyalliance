@@ -13,26 +13,26 @@
 				if($isadmin == true){?>
 				<div class="admin-tools"><button id="addnew"></button></div>
 		<?php }
-		}
+		} ?>
 
 
-		foreach($news as $item) {?>
-		<div class="news-item">
-			<div class="title-new">
-				<h3 class="tn text-font-fam"><?php echo $item["title"]?></h3>
-			</div>
-			<span class="date"><?php echo $item["username"]. "  " . date("d.m.Y", strtotime($item["date"]));?></span><br>
-			<div class="img-new-cont">
-				<div class="img-cont">
-					<img src=<?php echo "/postpic/" . $item["picture"]?> alt="">
-				</div>
-				<?php if($isadmin == true){?>
-					<div class="admin-tools2"><button class="editnew" data-id-new = "<?=$item["id"]?>"></button><button class="delnew" data-id-new = "<?=$item["id"]?>"></button></div>
-				<?php } ?>
-			</div>
-			<div class="text-new text-font-fam"><p><?php echo $item["text"]?></p></div>
-		</div>
-		<?php } ?>
+<!--        foreach($news as $item) {?>-->
+<!--        <div class="news-item">-->
+<!--            <div class="title-new">-->
+<!--                <h3 class="tn text-font-fam">--><?php //echo $item["title"]?><!--</h3>-->
+<!--            </div>-->
+<!--            <span class="date">--><?php //echo $item["username"]. "  " . date("d.m.Y", strtotime($item["date"]));?><!--</span><br>-->
+<!--            <div class="img-new-cont">-->
+<!--            <div class="img-cont">-->
+<!--                        <img src=--><?php //echo "/postpic/" . $item["picture"]?><!-- alt="">-->
+<!--				</div>-->
+<!--				--><?php //if($isadmin == true){?>
+<!--					<div class="admin-tools2"><button class="editnew" data-id-new = "--><?//=$item["id"]?><!--"></button><button class="delnew" data-id-new = "--><?//=$item["id"]?><!--"></button></div>-->
+<!--				--><?php //} ?>
+<!--			</div>-->
+<!--			<div class="text-new text-font-fam"><p>--><?php //echo $item["text"]?><!--</p></div>-->
+<!--		</div>-->
+<!--		--><?php //} ?>
 		<!--<div class="news-item">
 			<div class="title-new">
 				<h3 class="tn">Новость 2</h3>

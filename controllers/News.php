@@ -14,12 +14,12 @@
 			$this->page = $page;
 		}
 		public function action() {
-			$result = $this->model->select_news(); // запрос всей нововстей из БД
+			//$result = $this->model->select_news(); // запрос всей нововстей из БД
 			$title = "Новости | Смертельный союз";
 			$description = "Последние новости сообщества Смертельный союз WoW Classic";
 			$keywords = "WoW Classic, Гильдия WoW, Смертельный Союз, Новости гильдии, Пламегор, Flamegor, Орда, Deadly Alliance";
 			$Data = ["page" => $this->page, "title" => $title, "description" => $description, "keywords" => $keywords];
-			$Data["news"] = $result;
+			//$Data["news"] = $result;
 			$this->view->render("views/template.php", "views/news.php", $Data);
 		}
 		private function is_ajax(){
@@ -49,6 +49,12 @@
             $this->is_ajax();
             $_POST2 = json_decode(file_get_contents('php://input'), true);
             $res = $this->model->select_edit($_POST2["idnew"]);
+            echo json_encode($res);
+        }
+        public function select_limited() {
+		    $this->is_ajax();
+            $_POST2 = json_decode(file_get_contents('php://input'), true);
+            $res = $this->model->select_limited_news($_POST2["offset"], $_POST2["limit"]);
             echo json_encode($res);
         }
 	}
