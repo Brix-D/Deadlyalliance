@@ -4,22 +4,22 @@
 	<meta name="google-site-verification" content="adeF51NInTrQLVSklvou80hJkzQQoGs2cLo18R9xfOU" />
 	<meta name="description" content="<?=$description?>">
 	<meta name="keywords" content="<?=$keywords?>">
-	<link rel="stylesheet" href="styles/slick.css">
+	<link rel="stylesheet" href="/styles/slick.css">
 	<?php
-	if($page == "main" || $page == "")
+	if($page == "Main" || $page == "")
 	{
 	?>
-	<link rel="stylesheet" type="text/css" href="styles/onepage-scroll.css">	
+	<link rel="stylesheet" type="text/css" href="/styles/onepage-scroll.css">
 	<?php
 	}
 	?>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Maitree:500|Permanent+Marker&display=swap&subset=cyrillic" rel="stylesheet">
 	<link href="//db.onlinewebfonts.com/c/3ade034999153f8110b40724ad74f00e?family=Pacifica" rel="stylesheet" type="text/css"/>
 	<link href="//db.onlinewebfonts.com/c/3ad0fc99253e9a25029a8b33686e46fa?family=GeographicaScriptW01-Rg" rel="stylesheet" type="text/css"/>
-	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="/js/jquery-3.4.1.min.js"></script>
 <!--    <link rel="stylesheet" href="styles/swiper-bundle.css">-->
-    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
 	<meta name="viewport" content="width=device-width">
 	<title><?=$title?></title>
 </head>
@@ -31,8 +31,8 @@
 			<ul class = "menu">
 				<?php
 				$first = true;
-				$pages  = array("Главная" => "/", "Новости" => "news", "Устав" => "regulations", "Вступить" => "joinus");
-				$mpages  = array("Главная" => "/", "Новости" => "news", "Устав" => "regulations", "Вступить" => "joinus");
+				$pages  = array("Главная" => "/", "Новости" => "News", "Устав" => "Regulations", "Вступить" => "Joinus");
+				$mpages  = array("Главная" => "/", "Новости" => "News", "Устав" => "Regulations", "Вступить" => "Joinus");
 				if(@!hash_equals($_SESSION["hashlog"], $_COOKIE["logged"])) {
 					$mpages["Вход"] = "login";
 					$mpages["Регистрация"] = "register";
@@ -43,7 +43,7 @@
 					?>
 					<li class = "menu-item text-font-fam"><a class =
 					<?php
-					if($page == "" && $first == true)
+					if($page == "Main" && $first == true)
 					{
 						echo "\"link-pressed\"";
 						$first = false;
@@ -114,11 +114,11 @@
 			<span class = "inline foot-span-size foot-span-text text-font-fam">BattleTag: Теринама#2832</span>
 		</div>
 	</footer>
-<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
 <!--<script src="js/swiper-bundle.js"></script>-->
-<script src="js/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
-<script type="text/javascript" src="js/mainPage.js"></script>
-<script type="text/javascript" src="js/newsManger.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/js/jquery.onepage-scroll.min.js"></script>
+<script type="text/javascript" src="/js/mainPage.js"></script>
+<script type="text/javascript" src="/js/newsManger.js"></script>
 </body>
 </html>

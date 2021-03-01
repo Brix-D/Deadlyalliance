@@ -3,9 +3,6 @@
 <main class="wrapper">
 	<div class="news-cont">
 		<?php
-		//var_dump($_SESSION["hashlog"]);
-		//var_dump($_COOKIE["logged"]);
-		//if(strcmp($_SESSION["hashlog"], $_COOKIE["logged"]) == 0) {
 		if(@hash_equals($_SESSION["hashlog"], $_COOKIE["logged"])){
 			if(@hash_equals($_COOKIE["perm"], crypt("admin", "$23$gdgsdd14"))) {
 				$isadmin = true;
@@ -17,8 +14,8 @@
 				<div class="admin-tools"><button id="addnew"></button></div>
 		<?php }
 		}
-		//$res = $DB->insertArticle(array("header" => "title23", "text" => "text111111"));
-		//var_dump($res);
+
+
 		foreach($news as $item) {?>
 		<div class="news-item">
 			<div class="title-new">

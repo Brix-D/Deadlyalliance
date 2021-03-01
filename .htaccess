@@ -10,5 +10,5 @@ RewriteCond %{REQUEST_METHOD} OPTIONS
 RewriteCond %{ENV:IsPreflight} 1
 RewriteRule ^(.*)$ $1 [R=204,L]
 
-RewriteCond %{REQUEST_URI} !\.(php|css|jspng|gif|jpeg|jpg|mp4|png|webm|webp|js)$
+RewriteCond %{REQUEST_URI} !\.(php|css|jspng|gif|jpeg|jpg|mp4|png|webm|webp|js|ico|map)$
 RewriteRule .* index.php

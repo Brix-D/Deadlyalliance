@@ -22,6 +22,35 @@
 			$Data["news"] = $result;
 			$this->view->render("views/template.php", "views/news.php", $Data);
 		}
+		private function is_ajax(){
+            if (!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+                $this->action();
+                exit();
+            }
+        }
+
+		public function add() {
+		    $this->is_ajax();
+            $res=$this->model->insert_article($_SESSION["userid"], $_POST, $_FILES["image"]);
+            echo json_encode($res);
+        }
+        public function edit() {
+            $this->is_ajax();
+            $res=$this->model->edit_new($_POST["idnew"], $_POST, $_FILES["image"]);
+            echo json_encode($res);
+        }
+        public function delete() {
+            $this->is_ajax();
+            $_POST2 = json_decode(file_get_contents('php://input'), true);
+            $res = $this->model->delete_article($_POST2["idnew"]);
+            echo json_encode($res);
+        }
+        public function select_edit() {
+            $this->is_ajax();
+            $_POST2 = json_decode(file_get_contents('php://input'), true);
+            $res = $this->model->select_edit($_POST2["idnew"]);
+            echo json_encode($res);
+        }
 	}
 
 ?>
